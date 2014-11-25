@@ -10,8 +10,8 @@
   <packaging>pom</packaging>
 
   <modules>
-   <module>tmfcore</module>
-   <module>tmfcore_war</module>
+   <module>tmfcore_build_cli</module>
+   <module>tmfcore_build_war</module>
   </modules>
 
   <build>
