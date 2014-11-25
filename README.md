@@ -24,7 +24,7 @@ the code needed to build TMF's core as a command line application. More
 information on this module can be found in the [related git
 repository](https://github.com/bassosimone/tmfcore_build_cli).
 
-The `tmfcore_war` directory (which is also a git submodule) contains the
+The `tmfcore_build_war` directory (which is also a git submodule) contains the
 code needed to build TMF's core as a Java [Web application ARchive
 (WAR)](https://en.wikipedia.org/wiki/WAR_%28file_format%29) that can be
 runnable inside a container (e.g., Tomcat, Jetty-runner). More
