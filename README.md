@@ -2,7 +2,8 @@
 
 This repository contains the subrepositories needed to build the
 [core module](https://github.com/bassosimone/tmfcore) of
-[TellMeFirst (TMF)](http://tellmefirst.polito.it/).
+[TellMeFirst (TMF)](http://tellmefirst.polito.it/) both as
+a command-line application and as a Java Web Archive (aka WAR).
 
 ## How to clone this repository
 
@@ -37,7 +38,7 @@ install NetBeans8 from the [NetBeans web site](https://netbeans.org/).
 Once you have installed all the dependencies, you can build the
 code using the following command:
 
-    mvn install
+    mvn package
 
 You can instead clean the compiled artifacts using:
 
@@ -46,21 +47,22 @@ You can instead clean the compiled artifacts using:
 To combine both (recommended to be sure that the compile process
 starts from scratch) do:
 
-    mvn clean install
+    mvn clean package
 
 ## How this repository is organized
 
 The top-level
 [pom.xml](https://github.com/bassosimone/tmfcore_build/blob/master/pom.xml)
-file references two modules: `tmfcore` and `tmfcore_war`.
+file references two modules: `tmfcore_build_cli` and `tmfcore_build_war`.
 
-The `tmfcore` module (which is also a git submodule) contains the core
-functionality of TMF, that is, the `classify()` API. More information on
-this module can be found in the [related git
-repository](https://github.com/bassosimone/tmfcore).
+The `tmfcore_build_cli` module (which is also a git submodule) contains
+the code needed to build TMF's core as a command line application. More
+information on this module can be found in the [related git
+repository](https://github.com/bassosimone/tmfcore_build_cli).
 
-The `tmfcore_war` module (which is not a git submodule for simplicity but
-may become one in the future) contains the code needed to prepare a
-Java [Web application ARchive
+The `tmfcore_war` module (which is also a git submodule) contains the
+code needed to build TMF's core as a Java [Web application ARchive
 (WAR)](https://en.wikipedia.org/wiki/WAR_%28file_format%29) that can be
-run inside a container.
+runnable inside a container (e.g., Tomcat, Jetty-runner). More
+information on this module can be found in the [related git
+repository](https://github.com/bassosimone/tmfcore_build_war).
