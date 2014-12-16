@@ -15,7 +15,7 @@ run the following command:
 Otherwise, if you have already cloned, you can fetch the submodules using
 the following command:
 
-    git submodule update --init
+    git submodule update --init --recursive
 
 ## How this repository is organized
 
